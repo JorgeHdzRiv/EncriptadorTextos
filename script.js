@@ -24,6 +24,7 @@ function validar_texto(){
     }
 }
 
+//Encriptado
 function encriptar(string_encriptada){
     let matriz_codigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
     string_encriptada = string_encriptada.toLowerCase()
@@ -45,6 +46,26 @@ function btn_encriptar(){
         textArea.value = "";
         copia.style.display = "block";
     }
+}
+
+//Desencriptado
+function desencriptar(string_desencriptada){
+    let matriz_codigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    string_desencriptada = string_desencriptada.toLowerCase()
+
+    for(let i = 0;i< matriz_codigo.length;i++){
+        if(string_desencriptada.includes(matriz_codigo[i][1])){
+            string_desencriptada = string_desencriptada.replaceAll(matriz_codigo[i][1],matriz_codigo[i][0])
+        }
+    }
+
+    return string_desencriptada
+}
+
+function btn_desencriptar(){
+    const texto_encriptado = desencriptar(textArea.value);
+    mensaje.value = texto_encriptado;
+    textArea.value = "";
 }
 
 
