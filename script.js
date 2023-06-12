@@ -38,7 +38,7 @@ function encriptar(string_encriptada){
     return string_encriptada
 }
 
-function btn_encriptar(){
+function btnEncriptar(){
     if(!validar_texto()){
         const texto_encriptado = encriptar(textArea.value);
         mensaje.value = texto_encriptado;
@@ -62,10 +62,18 @@ function desencriptar(string_desencriptada){
     return string_desencriptada
 }
 
-function btn_desencriptar(){
+function btnDesencriptar(){
     const texto_encriptado = desencriptar(textArea.value);
     mensaje.value = texto_encriptado;
     textArea.value = "";
+}
+
+//Copiar
+function copiar(){
+    mensaje.select();
+    navigator.clipboard.writeText(mensaje.value)
+    mensaje.value = "";
+    alert("Texto Copiado")
 }
 
 

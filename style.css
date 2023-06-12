@@ -1,10 +1,11 @@
 *{
-    background: #F3F5FC;
+    background:#F3F5FC;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
     overflow-y: hidden;
+    
 }
 
 .logo{
@@ -15,32 +16,29 @@
 
 main{
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 240px;
+    margin-bottom: 10px;
+    margin-left: 180px;
+    
 }
 
-.text-area{
-    width: 500px;
-    border: none; /*Quita el borde o las lineas del borde */
+.text-area {
+    height: 400px;
+    border: none;
     color: #0A3871;
-    margin-top: 60px;
+    margin-top: 30px;
     padding: 2px;
-    text-transform: lowercase; /*Transforma el texto del place holder en miniscula  */
+    text-transform: lowercase;
 }
+::placeholder { color: #0A3871; }
+  .text-area:focus {
+      outline: none;
+    }
 
-::placeholder{
-    color: #0A3871; /*Color del texto */
-}
-
-.text-area:focus{  
-    outline: none; /* Quitamos el foco para que no aparezca el borde al dar en el recuadro */
-}
-
-.mensaje {
+.mensaje{
     height: 630px;
-    background: #FFFFFF;
-    background-image: url("./images/persona.png");
-    background-repeat: no-repeat; /*Solo pone la imagen una vez */
+    background: white;
+    background-image: url("/images/persona.png");
+    background-repeat: no-repeat;
     background-position: center;
     border: none;
     border-radius: 24px;
@@ -50,24 +48,13 @@ main{
     padding-left: 20px;
     position: fixed;
 }
-
-.mensaje:focus{
+.mensaje:focus {
     outline: none;
 }
 
 .botones{
     display: flex;
     margin-top: 18px;
-}
-
-.btn-encriptar {
-    background-color: #0A3871;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    color: white;
-    cursor: pointer;
-    height: 67px;
-    width: 328px;
 }
 
 .btn-desencriptar {
@@ -78,6 +65,16 @@ main{
     cursor: pointer;
     height: 67px;
     margin-left: 30px;
+    width: 328px;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
     width: 328px;
 }
 
@@ -95,5 +92,5 @@ main{
 
 .informacion {
     color: #495057;
-    font-size: 18px;
+    font-size:18px;
 }
